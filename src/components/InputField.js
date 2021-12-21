@@ -24,7 +24,7 @@ const StyleIcon = styled.img`
 
 const StyleInput = styled.input`
     background-color: ${({ theme }) => theme.colors.lighterGrayishCyan};
-    color: ${({ theme }) => theme.colors.darkGrayishCyan};
+    color: ${({ theme }) => theme.colors.veryDarkCyan};
     font-weight: ${({ theme }) => theme.font.weight.bold};
     font-size: ${({ theme }) => theme.font.size};
     font-family: ${({ theme }) => theme.font.family};

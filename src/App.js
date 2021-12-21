@@ -5,6 +5,7 @@ import logo from "./images/logo.svg";
 import iconPerson from "./images/icon-person.svg";
 import iconDollar from "./images/icon-dollar.svg";
 import InputField from "./components/InputField";
+import Tip from './components/Tip'
 
 const App = () => {
     return (
@@ -16,6 +17,17 @@ const App = () => {
                     <StyledFormGroup>
                         <label>Bill</label>
                         <InputField icon={iconDollar} />
+                    </StyledFormGroup>
+                    <StyledFormGroup>
+                        <label>Select Tip %</label>
+                        <StyledTipContainer>
+                            <Tip value="5" select={true}/>
+                            <Tip value="10"/>
+                            <Tip value="15" />
+                            <Tip value="25" />
+                            <Tip value="35" />
+                            <Tip value="custom" />
+                        </StyledTipContainer>
                     </StyledFormGroup>
                     <StyledFormGroup>
                         <label>Number of Persons</label>
@@ -38,5 +50,12 @@ const StyledContainer = styled.div`
 const StyledFormGroup = styled.div`
   margin-bottom: 10px;
 `;
+
+const StyledTipContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 5px;
+`
 
 export default App;
