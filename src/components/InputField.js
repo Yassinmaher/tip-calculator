@@ -1,28 +1,25 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const InputField = ({ icon }) => {
-    return (
-        <StyledDiv>
-            <StyleIcon src={icon} alt="icon" />
-            <StyleInput type="text" />
-        </StyledDiv>
-    )
+  return (
+    <StyledInput>
+      <img className='icon' src={icon} alt='icon' />
+      <input type='text' />
+    </StyledInput>
+  )
 }
 
-const StyledDiv = styled.div`
-    position: relative;
-    display: flex;
-    align-items: center;    margin-top: 10px;
-
-`
-
-const StyleIcon = styled.img`
+const StyledInput = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  .icon {
     position: absolute;
     z-index: 2;
     margin-left: 10px;
-`
-
-const StyleInput = styled.input`
+  }
+  input {
     background-color: ${({ theme }) => theme.colors.lighterGrayishCyan};
     color: ${({ theme }) => theme.colors.veryDarkCyan};
     font-weight: ${({ theme }) => theme.font.weight.bold};
@@ -30,15 +27,16 @@ const StyleInput = styled.input`
     font-family: ${({ theme }) => theme.font.family};
     border-radius: 5px;
     text-align: right;
-    width: 100%;;
+    width: 100%;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     border: none;
     position: relative;
     &:focus {
-        outline: none;
+      outline: none;
     }
+  }
 `
 
-export default InputField;
+export default InputField
