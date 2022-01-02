@@ -131,6 +131,10 @@ const StyledContainer = styled.div`
             font-weight: bolder;
             text-transform: uppercase;
             font-size: 15px;
+            cursor: pointer;
+            &:hover {
+                background-color: ${({ theme }) => theme.colors.lightGrayishCyan};
+            }
         }
     }
 `

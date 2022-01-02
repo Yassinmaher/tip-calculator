@@ -6,7 +6,7 @@ const theme = {
         darkGrayishCyan: 'hsl(184, 14%, 56%)',
         lightGrayishCyan: 'hsl(185, 41%, 84%)',
         lighterGrayishCyan: 'hsl(189, 41%, 97%)',
-        white: ' hsl(0, 0%, 100%)',
+        white: 'hsl(0, 0%, 100%)',
     },
     font: {
         size: '24px',

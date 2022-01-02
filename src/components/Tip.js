@@ -23,6 +23,10 @@ const StyledTip = styled.div`
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+    &:hover {
+        background-color:  ${({ theme }) => theme.colors.lightGrayishCyan};
+        color: ${({ theme }) => theme.colors.veryDarkCyan};
+    }
 `;
 
 export default Tip;

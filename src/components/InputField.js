@@ -32,7 +32,7 @@ const StyledInput = styled.div`
         padding-bottom: 5px;
         border: none;
         &:focus {
-            outline: none;
+            outline: 2px solid ${({ theme }) => theme.colors.strongCyan}
         }
     }
 `;
