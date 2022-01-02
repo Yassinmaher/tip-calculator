@@ -1,9 +1,9 @@
 # Frontend Mentor - Tip calculator app
 
+![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+
 ## Link Preview 🥳
 You can see the live website and try it on [Tip Calculator](https://tip-calc-yassinmaher.netlify.app/)
-
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
