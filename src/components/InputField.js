@@ -4,7 +4,7 @@ const InputField = ({ icon, value, onUpdate }) => {
     return (
         <StyledInput>
             <img className="icon" src={icon} alt="icon" />
-            <input type="text" value={value} onChange={onUpdate} />
+            <input type="text" value={value} onChange={onUpdate} placeholder="0" />
         </StyledInput>
     );
 };

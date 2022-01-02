@@ -11,9 +11,9 @@ import { useState } from 'react'
 const tipsList = [5, 10, 15, 25, 35, 'custom']
 
 const App = () => {
-    const [bill, setBill] = useState(0)
-    const [persons, setPersons] = useState(0)
-    const [activeIndex, setActiveIndex] = useState(1)
+    const [bill, setBill] = useState()
+    const [persons, setPersons] = useState()
+    const [activeIndex, setActiveIndex] = useState(0)
 
     return (
         <ThemeProvider theme={theme}>
