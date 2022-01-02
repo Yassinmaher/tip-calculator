@@ -18,7 +18,7 @@ const StyledTip = styled.div`
             ? props.theme.colors.veryDarkCyan
             : props.theme.colors.white};
     //font-size: ${({ theme }) => theme.font.size};
-    font-weight: ${({ theme }) => theme.font.weight.bold};
+    //font-weight: ${({ theme }) => theme.font.weight.bold};
     text-align: center;
     padding: 5px 15px;
     border-radius: 5px;

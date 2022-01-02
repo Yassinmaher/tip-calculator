@@ -27,12 +27,10 @@ const StyledInput = styled.div`
         font-family: ${({ theme }) => theme.font.family};
         border-radius: 5px;
         text-align: right;
-        width: 100%;
         padding-right: 15px;
         padding-top: 5px;
         padding-bottom: 5px;
         border: none;
-        position: relative;
         &:focus {
             outline: none;
         }

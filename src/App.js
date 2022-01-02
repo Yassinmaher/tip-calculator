@@ -51,6 +51,25 @@ const App = () => {
                         />
                     </div>
                 </form>
+                <div className="result">
+                    <div className="result-group">
+                        <div className='result-title'>
+                            <h5>Tip Amount</h5>
+                            <h6>/ Perosn</h6>
+                        </div>
+                        <h1>$4.27</h1>
+                    </div>
+                    <div className="result-group">
+                        <div className='result-title'>
+                            <h5>Total</h5>
+                            <h6>/ Perosn</h6>
+                        </div>
+                        <h1>$32.79</h1>
+                    </div>
+                    <button>
+                        Reset
+                    </button>
+                </div>
             </StyledContainer>
         </ThemeProvider>
     )
@@ -62,14 +81,57 @@ const StyledContainer = styled.div`
     padding: 20px;
     border-radius: 20px;
     text-align: left;
+    display: flex;
+    .form-group {
+        margin-bottom: 10px;
+    }
     .tipContainer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
         margin-top: 5px;
     }
-    .form-group {
-        margin-bottom: 10px;
+    .result {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        background-color: ${({ theme }) => theme.colors.veryDarkCyan};
+        border-radius: 20px;
+        padding: 20px;
+        .result-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            .result-title {
+                margin-right: 100px;
+            }
+            h5 {
+                color: ${({ theme }) => theme.colors.white};
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+            h6 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            h1 {
+                color: ${({ theme }) => theme.colors.strongCyan};
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+        button {
+            margin-top: auto;
+            background-color: ${({ theme }) => theme.colors.strongCyan};
+            border: none;
+            color: ${({ theme }) => theme.colors.veryDarkCyan};
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
     }
 `
 
