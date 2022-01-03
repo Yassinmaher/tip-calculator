@@ -13,7 +13,16 @@ const tipsList = [5, 10, 15, 25, 35, 'custom']
 const App = () => {
     const [bill, setBill] = useState()
     const [persons, setPersons] = useState()
-    const [activeIndex, setActiveIndex] = useState(0)
+    const [activeIndex, setActiveIndex] = useState()
+
+    const tipAmount = bill * (tipsList[activeIndex] / 100)
+    const total = tipAmount * persons
+
+    const handleResetClick = () => {
+        setBill('')
+        setActiveIndex('')
+        setPersons('')
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -57,16 +66,16 @@ const App = () => {
                             <h5>Tip Amount</h5>
                             <h6>/ Perosn</h6>
                         </div>
-                        <h1>$4.27</h1>
+                        <h1>${ isNaN(tipAmount) ? '0.00' : tipAmount.toFixed(2) }</h1>
                     </div>
                     <div className="result-group">
                         <div className='result-title'>
                             <h5>Total</h5>
                             <h6>/ Perosn</h6>
                         </div>
-                        <h1>$32.79</h1>
+                        <h1>${ isNaN(total) ? '0.00' : total.toFixed(2) }</h1>
                     </div>
-                    <button>
+                    <button onClick={handleResetClick}>
                         Reset
                     </button>
                 </div>
