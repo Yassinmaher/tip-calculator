@@ -62,22 +62,22 @@ const App = () => {
                 </form>
                 <div className="result">
                     <div className="result-group">
-                        <div className='result-title'>
+                        <div className="result-title">
                             <h5>Tip Amount</h5>
                             <h6>/ Perosn</h6>
                         </div>
-                        <h1>${ isNaN(tipAmount) ? '0.00' : tipAmount.toFixed(2) }</h1>
+                        <h1>
+                            ${isNaN(tipAmount) ? '0.00' : tipAmount.toFixed(2)}
+                        </h1>
                     </div>
                     <div className="result-group">
-                        <div className='result-title'>
+                        <div className="result-title">
                             <h5>Total</h5>
                             <h6>/ Perosn</h6>
                         </div>
-                        <h1>${ isNaN(total) ? '0.00' : total.toFixed(2) }</h1>
+                        <h1>${isNaN(total) ? '0.00' : total.toFixed(2)}</h1>
                     </div>
-                    <button onClick={handleResetClick}>
-                        Reset
-                    </button>
+                    <button onClick={handleResetClick}>Reset</button>
                 </div>
             </StyledContainer>
         </ThemeProvider>
@@ -118,7 +118,7 @@ const StyledContainer = styled.div`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
+            margin: 15px 0;
             .result-title {
                 margin-right: 100px;
             }
@@ -149,7 +149,8 @@ const StyledContainer = styled.div`
             font-size: 15px;
             cursor: pointer;
             &:hover {
-                background-color: ${({ theme }) => theme.colors.lightGrayishCyan};
+                background-color: ${({ theme }) =>
+                    theme.colors.lightGrayishCyan};
             }
         }
     }
