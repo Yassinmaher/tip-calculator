@@ -8,7 +8,7 @@ import Tip from './components/Tip'
 import theme from './config/theme'
 import { useState } from 'react'
 
-const tipsList = [5, 10, 15, 25, 35, 'custom']
+const tipsList = [5, 10, 15, 25, 35, 45]
 
 const App = () => {
     const [bill, setBill] = useState()
@@ -91,8 +91,11 @@ const StyledContainer = styled.div`
     border-radius: 20px;
     text-align: left;
     display: flex;
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
     .form-group {
-        margin-bottom: 10px;
+        margin: 15px 0;
     }
     .tipContainer {
         display: grid;
@@ -104,6 +107,10 @@ const StyledContainer = styled.div`
         display: flex;
         flex-direction: column;
         margin-left: 30px;
+        @media (max-width: 800px) {
+            margin-left: 0;
+            margin-top: 10px;
+        }
         background-color: ${({ theme }) => theme.colors.veryDarkCyan};
         border-radius: 20px;
         padding: 20px;
